@@ -13,20 +13,6 @@ logging.basicConfig(
 )
 
 # color schemes
-rgba = {
-    'green main': 'rgba(112, 182, 88, 0.6)',
-    'green dark': 'rgba(33, 84, 37, 0.6)',
-    'grey dark': 'rgba(49, 45, 49, 0.6)',
-    'dog': 'rgba(191, 209, 67, 0.6)',
-    'cat': 'rgba(232, 132, 65, 0.6)',
-    'small pet': 'rgba(212, 153, 59, 0.6)',
-    'fish': 'rgba(40, 58, 140, 0.6)',
-    'bird': 'rgba(109, 173, 218, 0.6)',
-    'reptile': 'rgba(101, 38, 57, 0.6)',
-}
-rgba_vals = list(rgba.values())
-rgba_inf = cycle(rgba.values())
-
 rgb = {
     'green_main': (112, 182, 88),
     'green_dark': (33, 84, 37),
@@ -40,3 +26,9 @@ rgb = {
     'black': (0, 0, 0),
     'white': (255, 255, 255),
 }
+
+opacity: float = 0.6
+rgba = {k: ('rgba' + str(v)[:-1] + f', {opacity})') for k, v in rgb.items()}
+rgba_vals = list(rgba.values())
+rgba_inf = cycle(rgba.values())
+

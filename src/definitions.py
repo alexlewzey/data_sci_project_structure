@@ -6,17 +6,52 @@ Constants to be used throughout the project these include:
  """
 from pathlib import Path
 
-# paths
-ROOT = Path(__file__).parent.parent
-DATA = ROOT / 'data'
-EXTERNAL = DATA / 'external'
-INTERIM = DATA / 'interim'
-PROCESSED = DATA / 'processed'
-RAW = DATA / 'raw'
 
-MODELS = ROOT / 'models'
+class Dirs:
+    """namespace for directory paths"""
+    ROOT = Path(__file__).parent.parent
+    DATA = ROOT / 'data'  # store for intermediate analysis
+    OUTPUT = ROOT / 'output'
+    CHARTS = OUTPUT / 'charts'
+    EXTERNAL = DATA / 'external'
+    INTERIM = DATA / 'interim'
+    PROCESSED = DATA / 'processed'
+    RAW = DATA / 'raw'
 
-FIGURES = ROOT / 'reports' / 'figures'
+    MODELS = ROOT / 'models'
+
+    FIGURES = ROOT / 'reports' / 'figures'
+
+
+class External:
+    """namespace for external data file paths"""
+    pass
+
+
+class Interim:
+    """namespace for interim data file paths"""
+    pass
+
+
+class Processed:
+    """namespace for processed data file paths"""
+    pass
+
+
+class Raw:
+    """namespace for raw data file paths"""
+    pass
+
+
+class Models:
+    """namespace for serialised model paths"""
+    pass
+
+
+class Charts:
+    """namespace for chart file paths"""
+    pass
+
 
 # dates
 
@@ -24,7 +59,5 @@ FIGURES = ROOT / 'reports' / 'figures'
 # string constants
 
 
-
 # numeric constants
 MIL: int = 1_000_000
-
