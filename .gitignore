@@ -1,8 +1,6 @@
-
 # git ignoreing the contents of data directories while retaining the structure
 /data/*/**
 /data/*/!.gitkeep
-
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
