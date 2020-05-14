@@ -1,8 +1,7 @@
 
 # git ignoreing the contents of data directories while retaining the structure
-
 /data/*/**
-!.gitkeep
+/data/*/!.gitkeep
 
 
 # Byte-compiled / optimized / DLL files
