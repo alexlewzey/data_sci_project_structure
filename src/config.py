@@ -1,4 +1,4 @@
-"""Project configurations such as logger, color scheme etc"""
+"""Project configurations"""
 
 import logging
 from itertools import cycle
@@ -9,7 +9,6 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y %H:%M:%S',
     level=logging.INFO,
-    # filename='logs.txt'
 )
 
 # color schemes
@@ -31,4 +30,3 @@ opacity: float = 0.6
 rgba = {k: ('rgba' + str(v)[:-1] + f', {opacity})') for k, v in rgb.items()}
 rgba_vals = list(rgba.values())
 rgba_inf = cycle(rgba.values())
-
