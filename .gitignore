@@ -1,6 +1,12 @@
-# git ignoreing the contents of data directories while retaining the structure
+# contents of data sub-directories while retaining the structure
 /data/*/**
-/data/*/!.gitkeep
+!/data/*/.gitkeep
+# outputs
+output/*
+output/.gitkeep
+# plotly
+temp-plot.html
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
