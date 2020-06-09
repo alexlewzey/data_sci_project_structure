@@ -3,7 +3,9 @@
 !/data/*/.gitkeep
 # outputs
 output/*
-output/.gitkeep
+!output/.gitkeep
+models/*
+!models/.gitkeep
 # plotly
 temp-plot.html
 

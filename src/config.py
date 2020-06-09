@@ -4,12 +4,11 @@ import logging
 from itertools import cycle
 
 # logger configuration
-logger = logging.getLogger(__name__)
-logging.basicConfig(
-    format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
-    datefmt='%d-%m-%Y %H:%M:%S',
-    level=logging.INFO,
-)
+log_config = {
+    'format': '%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    'datefmt': '%d-%m-%Y %H:%M:%S',
+    'level': logging.INFO,
+}
 
 # color schemes
 rgb = {
