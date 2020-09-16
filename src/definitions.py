@@ -1,8 +1,6 @@
 """Module of global constants"""
 from pathlib import Path
 
-from src.helpers import slibtk
-
 
 class Paths:
     """Global constants for directory/file paths"""
@@ -15,7 +13,10 @@ class Paths:
     MODELS = ROOT / 'models'
 
     OUTPUT = ROOT / 'output'
-    TODAY = slibtk.date_versioned_dir(OUTPUT)
-    TODAY.mkdir(exist_ok=True)
 
-    SQL = ROOT / 'src' / 'data'
+    def version(self, i: int):
+        dir_ = self.OUTPUT / f'version_{i}'
+        dir_.mkdir(exist_ok=True)
+        return dir_
+
+    SRC_DATA = ROOT / 'src' / 'data'
