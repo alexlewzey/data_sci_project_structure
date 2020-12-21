@@ -5,6 +5,7 @@ from pathlib import Path
 class Paths:
     """Global constants for directory/file paths"""
     ROOT = Path(__file__).parent.parent
+    PROJECT_NAME = ROOT.parent
     DATA = ROOT / 'data'
     CACHES = DATA / 'caches'
     INTERIM = DATA / 'interim'
