@@ -1,5 +1,11 @@
 """Module of global constants"""
 from pathlib import Path
+import logging
+from typing import *
+
+PathOrStr = Union[str, Path]
+OptPathOrStr = Optional[Union[str, Path]]
+OptSeq = Optional[Sequence]
 
 
 class Paths:
@@ -21,3 +27,10 @@ class Paths:
         return dir_
 
     SRC_DATA = ROOT / 'src' / 'data'
+
+
+log_config = {
+    'format': '%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    'datefmt': '%d-%m-%Y %H:%M:%S',
+    'level': logging.INFO,
+}
