@@ -7,6 +7,8 @@ PathOrStr = Union[str, Path]
 OptPathOrStr = Optional[Union[str, Path]]
 OptSeq = Optional[Sequence]
 
+Path.ls = lambda x: list(x.iterdir())
+
 
 class Paths:
     """Global constants for directory/file paths"""
@@ -21,8 +23,9 @@ class Paths:
 
     OUTPUT = ROOT / 'output'
 
-    def version(self, i: int):
-        dir_ = self.OUTPUT / f'version_{i}'
+    @classmethod
+    def version(cls, i: int, dname: str = 'version') -> Path:
+        dir_ = cls.OUTPUT / f'{dname}_{i}'
         dir_.mkdir(exist_ok=True)
         return dir_
 
